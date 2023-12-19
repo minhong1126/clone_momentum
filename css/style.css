@@ -1,0 +1,13 @@
+.hidden{
+    display: none;
+}
+
+body{
+    margin: 0 auto;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
