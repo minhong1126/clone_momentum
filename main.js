@@ -1,15 +1,17 @@
 const express = require('express');
-const app = express();
+const mysql = require('mysql');
 
 const SV_PORT = 8000;
 const DB_PORT = 3306;
 
-const mysql = require('mysql');
+const app = express();
+
 const conn = {
     host: 'localhost',
     port: DB_PORT,
-    id: 'id',
-    database: 'todolist'
+    id: 'root',
+    password: '0000',
+    database: 'todoList'
 };
 
 const connection = mysql.createConnection(conn);
@@ -31,6 +33,8 @@ app.use(express.static(__dirname + "/front"));
 app.get("/",(req, res) => {
     res.sendFile(__dirname + "/index.html")
 });
+
+app.post()
 
 app.listen(PORT, () => {
     console.log(`Server running in ${SV_PORT} Port`);
