@@ -1,12 +1,13 @@
-const loginForm = document.querySelector("#login-form")
-const loginInput = document.querySelector("#login-form input")
-const greeting = document.querySelector("#greeting")
+const loginForm = document.querySelector("#login-form");    // form 전체
+const loginInput = document.querySelector("#login-form input"); // form 중 input
+const greeting = document.querySelector("#greeting");   // 시간과 함께 나오는 이름창
 
 const HIDDEN_CLASS = "hidden"
 const USER_NAME_KEY = "username"
 
 function onLoginSubmit(e){
     e.preventDefault();
+    const name = loginInput.value;
     
     loginForm.classList.add(HIDDEN_CLASS)
     const userName = loginInput.value
@@ -14,17 +15,17 @@ function onLoginSubmit(e){
     paintGreeting(userName)
 }
 
-function paintGreeting(username){
-    greeting.classList.remove(HIDDEN_CLASS)
-    greeting.innerText = ` Hello, \n ${username} `
-}
+// function paintGreeting(username){
+//     greeting.classList.remove(HIDDEN_CLASS)
+//     greeting.innerText = ` Hello, \n ${username} `
+// }
 
-const savedUserName = localStorage.getItem(USER_NAME_KEY)
+// const savedUserName = localStorage.getItem(USER_NAME_KEY)
 
-if(savedUserName === null){
-    loginForm.classList.remove(HIDDEN_CLASS)
-    loginForm.addEventListener("submit", onLoginSubmit)
-}
-else{
-    paintGreeting(savedUserName)
-}
+// if(savedUserName === null){
+//     loginForm.classList.remove(HIDDEN_CLASS)
+//     loginForm.addEventListener("submit", onLoginSubmit)
+// }
+// else{
+//     paintGreeting(savedUserName)
+// }

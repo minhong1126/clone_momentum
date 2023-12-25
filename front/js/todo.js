@@ -5,7 +5,7 @@ const todoList = document.querySelector("#todo-ul");
 function handleTodoSubmit(e){
     e.preventDefault();
     
-    todoForm.setAttribute("method", "post");
+    // todoForm.setAttribute("method", "post");
 
     const newTodo = todoInput.value;
     todoInput.value = "";

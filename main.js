@@ -31,11 +31,14 @@ connection.query(test, function (err, result, field){
 app.use(express.static(__dirname + "/front"));
 
 app.get("/",(req, res) => {
-    res.sendFile(__dirname + "/index.html")
+    res.sendFile(__dirname + "/index.html");
 });
 
-app.post()
+app.post("/loginPost", function(req, res){
+    console.log(req.body);
+    res.send("Posted");
+})
 
-app.listen(PORT, () => {
+app.listen(SV_PORT, () => {
     console.log(`Server running in ${SV_PORT} Port`);
 })
