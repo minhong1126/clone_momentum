@@ -1,32 +1,8 @@
 const express = require('express');
-const mysql = require('mysql');
-
-const SV_PORT = 8000;
-const DB_PORT = 3306;
-
+// const cookie = require('cookie-parser');
+const db = require('./back/db');
 const app = express();
-
-const conn = {
-    host: 'localhost',
-    port: DB_PORT,
-    id: 'root',
-    password: '0000',
-    database: 'todoList'
-};
-
-const connection = mysql.createConnection(conn);
-connection.connect();
-
-test = "SELECT * FROM MEMBERS";
-
-connection.query(test, function (err, result, field){
-    if(err){
-        console.log("Query Error");
-    }
-    else{
-        console.log(result);
-    }
-});
+const SV_PORT = 8000;
 
 app.use(express.static(__dirname + "/front"));
 
@@ -35,9 +11,19 @@ app.get("/",(req, res) => {
 });
 
 app.post("/loginPost", function(req, res){
+    const {userid, pw} = req.body;
+    const exist = db.get(userid);
+    if(exist){
+        // 존재 O
+    }
+    else{
+        // 존재 X
+    }
+
     console.log(req.body);
     res.send("Posted");
 })
+
 
 app.listen(SV_PORT, () => {
     console.log(`Server running in ${SV_PORT} Port`);

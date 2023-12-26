@@ -9,4 +9,13 @@ const db = mysql.createConnection({
     database: 'todoList'
 });
 
-db.connect();
+db.connect((err) => {
+    if(err){
+        console.log(err);
+    }
+    else{
+        console.log("DB connected");
+    }
+});
+
+module.exports = db;

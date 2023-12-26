@@ -6,11 +6,13 @@
 </head>
 <body>
     <!-- 로그인 -->
-    <form action="/loginPost" method="post" id="login-form" class="hidden">
-        <input type="text"
-            required 
-            placeholder="What is your name?"
-            maxlength="15">
+    <form action="/loginPost" method="post" id="loginForm">
+        <h3> Welcome, </h3>
+
+        <label for="loginName"> User Name: </label> 
+        <input type="text" id="loginName"/>
+        <br/>
+
         <input type="submit" value="Log in">
     </form>
 
