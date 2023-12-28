@@ -1,0 +1,16 @@
+html
+    head 
+        meta(charset='utf-8')
+        title= "Momentum"
+    body 
+        h1= "Welcome, "
+        form(action="/loginForm" method="post")
+            div
+                label(for="loginId") Id: 
+                input(type="text" id="loginId")
+            div
+                label(for="loginPw") Password:
+                input(type="password" id="loginPw")
+            div
+                input(type="button" value="submit")
+                a(href="/route/signUp") Sign up
