@@ -1,21 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "clone_momentum",
-  "version": "1.0.0",
-  "description": "https://nomadcoders.co/javascript-for-beginners",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.js"
-  },
-  "dependencies": {
-    "express": "^4.17.1",
-    "mysql": "^2.18.1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
-=======
   "name": "momentum",
   "version": "1.0.0",
   "description": "momentum clone 웹",
@@ -30,5 +13,4 @@
     "express": "^4.18.2",
     "pug": "^3.0.2"
   }
->>>>>>> 993bd33aa02ecd64a2ee75d47389fb9a821d4641
 }
