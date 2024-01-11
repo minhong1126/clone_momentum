@@ -1,0 +1,19 @@
+block joinForm 
+    .form-container 
+        form(action='/join', method='post')
+            div
+                label(for="joinId") Id: #{userId}
+                input(type="text" id="joinId")
+            div
+                label(for="joinPw") Password: #{pw}
+                input(type="password" id="joinPw")
+            div
+                label(for="joinName") Name: #{name}
+                input(type="text" id="joinName")
+            div
+                label(for="joinBday") Birthday: #{bday}
+                input(type="date" id="joinBday")
+            
+            
+            
+            
