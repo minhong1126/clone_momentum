@@ -1,0 +1,17 @@
+html
+    head 
+        meta(charset='utf-8')
+        title= "Momentum"
+    body 
+        h1= "Welcome, "
+        form(action="/login" method="post")
+            div
+                label(for="loginId") Id: #{userId}
+                input(type="text" id="loginId")
+            div
+                label(for="loginPw") Password:  #{userPw}
+                input(type="password" id="loginPw")
+            div    
+                input(type="button" value="submit")
+        a(href="/views/join.js") Join
+include ./layout/footer.pug
